@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Heart Disease Classifier</title>
+</head>
+<body>
+    <div id="container">
+        <h1>HEART DISEASE CLASSIFIER</h1>
+        <form method="POST", action="{{url_for('predict')}}" class="pred">
+            <label for="age">Age:</label>
+            <input type="text" id="age" name="age" />
+            <label for="sex">Sex:</label>
+            <input type="text" id="sex" name="sex" />
+            <label for="cpt">Chest pain type:</label>
+            <input type="text" id="cpt" name="cpt" />
+            <label for="bp">BP:</label>
+            <input type="text" id="bp" name="bp" />
+            <label for="ch">Cholesterol:</label>
+            <input type="text" id="ch" name="ch" />
+            <label for="fbs">FBS over 120:</label>
+            <input type="text" id="fbs" name="fbs" />
+            <label for="ekg">EKG results:</label>
+            <input type="text" id="ekg" name="ekg" />
+            <label for="hr">Max HR:</label>
+            <input type="text" id="hr" name="hr" />
+            <label for="ea">Exercise angina:</label>
+            <input type="text" id="ea" name="ea" />
+            <label for="std">ST depression:</label>
+            <input type="text" id="std" name="std" />
+            <label for="sos">Slope of ST:</label>
+            <input type="text" id="sos" name="sos" />
+            <label for="nvf">Number of vessels fluro:</label>
+            <input type="text" id="nvf" name="nvf" />
+            <label for="th">Thallium:</label>
+            <input type="text" id="th" name="th" />
+            <input type="submit", value="Predict" class="button">
+        </form>
+    </div>
+</body>
+</html>
